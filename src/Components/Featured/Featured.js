@@ -2,7 +2,7 @@ import React from "react";
 import "./Featured.css";
 
 const truncateText = (text) =>
-  text.length > 200 ? `${text.substring(0, 200)}...` : text;
+  text && text.length > 200 ? `${text.substring(0, 200)}...` : text;
 
 const Featured = ({ featuredData }) => {
   let firstAirDate = new Date(featuredData.first_air_date);

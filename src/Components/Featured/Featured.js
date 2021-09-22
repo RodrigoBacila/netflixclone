@@ -12,6 +12,10 @@ const Featured = ({ featuredData }) => {
     genres.push(featuredData.genres[i].name);
   }
 
+  const preventAnchorRedirect = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <section
       className="featured"
@@ -42,12 +46,14 @@ const Featured = ({ featuredData }) => {
               <a
                 className="featured--watchbutton"
                 href={`/watch/${featuredData.id}`}
+                onClick={(e) => preventAnchorRedirect(e)}
               >
                 ► Watch
               </a>
               <a
                 className="featured--mylistbutton"
                 href={`/list/add/${featuredData.id}`}
+                onClick={(e) => preventAnchorRedirect(e)}
               >
                 + My List
               </a>

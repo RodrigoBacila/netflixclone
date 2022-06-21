@@ -13,7 +13,7 @@ const Header = ({ shouldDisplayBlackBackground }) => {
         </a>
       </div>
       <div className="header--user">
-        <a href="/">
+        <a href="/" onClick={(e) => e.preventDefault()}>
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
             alt="User"

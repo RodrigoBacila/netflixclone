@@ -48,7 +48,7 @@ const App = () => {
       setTimeout(() => {
         setIntro(false);
         setPlatform(true);
-      }, 3900);
+      }, 3650);
   }, [intro]);
 
   useEffect(() => {
